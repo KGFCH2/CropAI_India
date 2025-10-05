@@ -667,7 +667,7 @@ gantt
 <div align="center">
 
 ```mermaid
-graph TB
+flowchart TD
     subgraph "📊 CropAI India Dashboard"
         Dashboard[🏠 Main Dashboard<br/>Central Control Hub]
     end
@@ -747,16 +747,16 @@ graph TB
         Resources --> UsefulLinks[🔗 Useful Links<br/>External Resources]
     end
     
-    Dashboard --> Metrics
-    Dashboard --> Stats
-    Dashboard --> Predictions
-    Dashboard --> Recommendations
-    Dashboard --> LivePrices
-    Dashboard --> DemandAnalysis
-    Dashboard --> CurrentWeather
-    Dashboard --> Forecasting
-    Dashboard --> AIChat
-    Dashboard --> Resources
+    %% Level 1: Primary Sections
+    Dashboard --> Overview[🎯 Overview Section<br/>Key Metrics & Statistics]
+    Dashboard --> Intelligence[🤖 AI Intelligence Hub<br/>Predictions & Recommendations]
+    Dashboard --> Market[📈 Market Intelligence Center<br/>Pricing & Demand Analytics]
+    Dashboard --> Weather[🌦️ Weather & Climate Station<br/>Forecasting & Monitoring]
+    Dashboard --> Support[📱 Support & Communication<br/>Chat & Resources]
+    
+    %% Level 2: Overview Components
+    Overview --> Metrics[📈 Key Performance Metrics<br/>Real-time KPIs]
+    Overview --> Stats[📊 Quick Statistics<br/>Summary Cards]
     
     classDef main fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
     classDef overview fill:#e8f5e8,stroke:#4caf50,stroke-width:2px,color:#000
