@@ -387,7 +387,7 @@ graph TB
 <div align="center">
 
 ```mermaid
-graph LR
+flowchart TD
     subgraph "✅ Currently Implemented"
         A[📱 React Frontend]
         B[🌾 Crop Data Display]
