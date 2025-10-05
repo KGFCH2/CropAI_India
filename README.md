@@ -245,65 +245,236 @@ CropAI India is a comprehensive **AI-powered agricultural intelligence platform*
 
 ---
 
-## 🔄 Platform Workflow
+## 🔄 Platform Workflow & System Architecture
+
+### 📊 **Main Platform Workflow**
 
 <div align="center">
 
 ```mermaid
-graph TD
-    A[👨‍🌾 Farmer Registration] --> B[📍 Location Setup]
-    B --> C[🌾 Crop Selection]
-    C --> D[📊 Dashboard Access]
+flowchart TD
+    A["👨‍🌾 Farmer Registration<br/>Create Account & Profile"] --> B["📍 Location Setup<br/>State, District, Village"]
+    B --> C["🌾 Crop Selection<br/>Choose Crops & Seasons"]
+    C --> D["📊 Dashboard Access<br/>Personalized Interface"]
     
-    D --> E[🤖 AI Analysis]
-    D --> F[📈 Market Intelligence]
-    D --> G[🌦️ Weather Insights]
-    D --> H[💬 Chat Support]
+    D --> E["🤖 AI Analysis<br/>Data Processing"]
+    D --> F["📈 Market Intelligence<br/>Price & Demand Data"]
+    D --> G["🌦️ Weather Insights<br/>Climate Monitoring"]
+    D --> H["💬 Chat Support<br/>AI Assistant"]
     
-    E --> I[🎯 Yield Predictions]
-    E --> J[🛡️ Risk Assessment]
-    E --> K[🌱 Crop Recommendations]
+    E --> I["🎯 Yield Predictions<br/>95% Accuracy"]
+    E --> J["🛡️ Risk Assessment<br/>Threat Analysis"]
+    E --> K["🌱 Crop Recommendations<br/>Optimal Varieties"]
     
-    F --> L[💰 Price Forecasting]
-    F --> M[📊 Demand Analysis]
-    F --> N[🔔 Market Alerts]
+    F --> L["💰 Price Forecasting<br/>Market Trends"]
+    F --> M["📊 Demand Analysis<br/>Supply-Demand"]
+    F --> N["🔔 Market Alerts<br/>Selling Opportunities"]
     
-    G --> O[⚠️ Weather Warnings]
-    G --> P[🌧️ Monsoon Predictions]
-    G --> Q[🏜️ Drought Alerts]
+    G --> O["⚠️ Weather Warnings<br/>Storm Alerts"]
+    G --> P["🌧️ Monsoon Predictions<br/>Rainfall Forecast"]
+    G --> Q["🏜️ Drought Alerts<br/>Water Scarcity"]
     
-    H --> R[🧠 Personalized Advice]
-    H --> S[📱 Real-time Support]
-    H --> T[📚 Knowledge Base]
+    H --> R["🧠 Personalized Advice<br/>Custom Solutions"]
+    H --> S["📱 Real-time Support<br/>24/7 Assistance"]
+    H --> T["📚 Knowledge Base<br/>Best Practices"]
     
-    I --> U[📋 Action Plans]
+    I --> U["📋 Action Plans<br/>Implementation"]
     J --> U
     K --> U
-    L --> V[💡 Decision Making]
+    L --> V["💡 Decision Making<br/>Strategic Choices"]
     M --> V
     N --> V
-    O --> W[🚨 Emergency Response]
+    O --> W["🚨 Emergency Response<br/>Crisis Management"]
     P --> W
     Q --> W
-    R --> X[📈 Improved Yields]
+    R --> X["📈 Improved Yields<br/>Better Results"]
     S --> X
     T --> X
     
-    U --> Y[🌾 Optimal Farming]
+    U --> Y["🌾 Optimal Farming<br/>Enhanced Productivity"]
     V --> Y
     W --> Y
     X --> Y
     
-    Y --> Z[💰 Increased Profits]
+    Y --> Z["💰 Increased Profits<br/>Financial Success"]
     
-    style A fill:#e1f5fe
-    style Y fill:#e8f5e8
-    style Z fill:#fff3e0
-    style E fill:#f3e5f5
-    style F fill:#e3f2fd
-    style G fill:#e8f5e8
-    style H fill:#fff8e1
+    %% Styling for better visibility
+    classDef userInput fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef aiProcess fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef marketData fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef weatherData fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef support fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    classDef outcome fill:#e0f2f1,stroke:#00695c,stroke-width:3px,color:#000
+    
+    class A,B,C,D userInput
+    class E,I,J,K aiProcess
+    class F,L,M,N marketData
+    class G,O,P,Q weatherData
+    class H,R,S,T support
+    class U,V,W,X,Y,Z outcome
 ```
+
+</div>
+
+### 🏗️ **System Architecture Diagram**
+
+<div align="center">
+
+```mermaid
+graph TB
+    subgraph "🌐 Frontend Layer"
+        UI[📱 React Web App<br/>TypeScript + Tailwind]
+        Mobile[📲 Mobile Interface<br/>Responsive Design]
+    end
+    
+    subgraph "⚡ API Gateway"
+        Gateway[🚪 API Gateway<br/>Authentication & Routing]
+    end
+    
+    subgraph "🧠 AI/ML Services"
+        ML[🤖 Machine Learning<br/>Yield Prediction]
+        Vision[👁️ Computer Vision<br/>Crop Disease Detection]
+        NLP[🗣️ Natural Language<br/>Chat Assistant]
+    end
+    
+    subgraph "📊 Data Processing"
+        Weather[🌦️ Weather Service<br/>Climate Data]
+        Market[💰 Market Service<br/>Price Analytics]
+        Crop[🌾 Crop Service<br/>Agricultural Data]
+    end
+    
+    subgraph "🗄️ Data Storage"
+        DB[(🗃️ Main Database<br/>User & Crop Data)]
+        Cache[(⚡ Redis Cache<br/>Real-time Data)]
+        Files[(📁 File Storage<br/>Images & Documents)]
+    end
+    
+    subgraph "🌍 External APIs"
+        Satellite[🛰️ Satellite Data<br/>ISRO/NASA]
+        WeatherAPI[🌡️ Weather APIs<br/>IMD/OpenWeather]
+        MarketAPI[📈 Market APIs<br/>Government Portals]
+    end
+    
+    UI --> Gateway
+    Mobile --> Gateway
+    Gateway --> ML
+    Gateway --> Vision
+    Gateway --> NLP
+    Gateway --> Weather
+    Gateway --> Market
+    Gateway --> Crop
+    
+    ML --> DB
+    Vision --> Files
+    NLP --> Cache
+    Weather --> WeatherAPI
+    Market --> MarketAPI
+    Crop --> Satellite
+    
+    Weather --> DB
+    Market --> DB
+    Crop --> DB
+    
+    classDef frontend fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef api fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef ai fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef data fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef storage fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
+    classDef external fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000
+    
+    class UI,Mobile frontend
+    class Gateway api
+    class ML,Vision,NLP ai
+    class Weather,Market,Crop data
+    class DB,Cache,Files storage
+    class Satellite,WeatherAPI,MarketAPI external
+```
+
+</div>
+
+### 🔄 **Data Flow Diagram**
+
+<div align="center">
+
+```mermaid
+sequenceDiagram
+    participant F as 👨‍🌾 Farmer
+    participant UI as 📱 Web App
+    participant API as 🚪 API Gateway
+    participant AI as 🤖 AI Engine
+    participant DB as 🗄️ Database
+    participant EXT as 🌍 External APIs
+    
+    F->>UI: Login & Select Crops
+    UI->>API: Send User Request
+    API->>DB: Fetch User Profile
+    DB->>API: Return Profile Data
+    
+    API->>EXT: Get Weather Data
+    API->>EXT: Get Market Prices
+    API->>EXT: Get Satellite Images
+    
+    EXT->>API: Return Real-time Data
+    API->>AI: Process Data with ML
+    AI->>API: Return Predictions
+    
+    API->>DB: Store Results
+    API->>UI: Send Recommendations
+    UI->>F: Display Insights
+    
+    Note over F,EXT: Real-time Agricultural Intelligence
+```
+
+</div>
+
+### 📈 **User Journey Flowchart**
+
+<div align="center">
+
+```mermaid
+flowchart LR
+    Start([🚀 User Visits Platform]) --> Register{👤 New User?}
+    
+    Register -->|Yes| Signup[📝 Sign Up Process]
+    Register -->|No| Login[🔑 Login]
+    
+    Signup --> Profile[👨‍🌾 Complete Profile]
+    Profile --> Location[📍 Set Location]
+    Location --> Crops[🌾 Select Crops]
+    
+    Login --> Dashboard[📊 Dashboard]
+    Crops --> Dashboard
+    
+    Dashboard --> Features{🎯 Choose Feature}
+    
+    Features -->|AI Analysis| AIPath[🤖 AI Predictions]
+    Features -->|Market Data| MarketPath[💰 Market Intelligence]
+    Features -->|Weather| WeatherPath[🌦️ Weather Insights]
+    Features -->|Chat| ChatPath[💬 AI Assistant]
+    
+    AIPath --> Results[📈 View Results]
+    MarketPath --> Results
+    WeatherPath --> Results
+    ChatPath --> Results
+    
+    Results --> Action{⚡ Take Action?}
+    Action -->|Yes| Implement[✅ Implement Advice]
+    Action -->|No| Dashboard
+    
+    Implement --> Success[🎉 Improved Farming]
+    Success --> Dashboard
+    
+    classDef startEnd fill:#e8f5e8,stroke:#4caf50,stroke-width:3px,color:#000
+    classDef process fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
+    classDef decision fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
+    classDef success fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000
+    
+    class Start,Success startEnd
+    class Signup,Profile,Location,Crops,Dashboard,AIPath,MarketPath,WeatherPath,ChatPath,Results,Implement process
+    class Register,Features,Action decision
+```
+
+</div>
 
 ### 🔄 **How It Works**
 
@@ -315,6 +486,184 @@ graph TD
 | 🌦️ **Climate Monitoring** | Weather Analysis → Risk Assessment → Warnings | Proactive risk management |
 | 💬 **Support** | AI Chat → Expert Advice → Knowledge Sharing | 24/7 intelligent assistance |
 | 📈 **Results** | Optimized Farming → Increased Yields → Higher Profits | Measurable ROI for farmers |
+
+### 🧠 **AI/ML Pipeline Architecture**
+
+<div align="center">
+
+```mermaid
+flowchart TB
+    subgraph "📥 Data Ingestion"
+        Satellite[🛰️ Satellite Imagery<br/>Real-time Monitoring]
+        IoT[📡 IoT Sensors<br/>Soil & Weather Data]
+        Historical[📊 Historical Data<br/>10+ Years Records]
+        Market[💰 Market Data<br/>Price & Demand]
+    end
+    
+    subgraph "🔄 Data Processing"
+        Clean[🧹 Data Cleaning<br/>Validation & Normalization]
+        Feature[⚙️ Feature Engineering<br/>Variable Creation]
+        Integrate[🔗 Data Integration<br/>Multi-source Fusion]
+    end
+    
+    subgraph "🤖 Machine Learning Models"
+        Yield[📈 Yield Prediction<br/>Random Forest + XGBoost]
+        Price[💹 Price Forecasting<br/>LSTM + ARIMA]
+        Risk[⚠️ Risk Assessment<br/>SVM + Neural Networks]
+        Recommend[🎯 Crop Recommendation<br/>Collaborative Filtering]
+    end
+    
+    subgraph "🔍 Model Validation"
+        Test[🧪 A/B Testing<br/>Model Performance]
+        Validate[✅ Cross Validation<br/>Accuracy Assessment]
+        Monitor[📊 Model Monitoring<br/>Drift Detection]
+    end
+    
+    subgraph "📤 Output Generation"
+        Insights[💡 Actionable Insights<br/>Farmer Recommendations]
+        Alerts[🚨 Real-time Alerts<br/>Critical Notifications]
+        Reports[📋 Detailed Reports<br/>Analytics Dashboard]
+    end
+    
+    Satellite --> Clean
+    IoT --> Clean
+    Historical --> Clean
+    Market --> Clean
+    
+    Clean --> Feature
+    Feature --> Integrate
+    
+    Integrate --> Yield
+    Integrate --> Price
+    Integrate --> Risk
+    Integrate --> Recommend
+    
+    Yield --> Test
+    Price --> Validate
+    Risk --> Monitor
+    Recommend --> Test
+    
+    Test --> Insights
+    Validate --> Alerts
+    Monitor --> Reports
+    
+    classDef input fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef ml fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef validate fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef output fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000
+    
+    class Satellite,IoT,Historical,Market input
+    class Clean,Feature,Integrate process
+    class Yield,Price,Risk,Recommend ml
+    class Test,Validate,Monitor validate
+    class Insights,Alerts,Reports output
+```
+
+</div>
+
+### 🌾 **Crop Lifecycle Management**
+
+<div align="center">
+
+```mermaid
+gantt
+    title 🌾 Crop Lifecycle with AI Interventions
+    dateFormat  YYYY-MM-DD
+    section 🌱 Pre-Planting
+    Soil Analysis           :done, soil, 2024-01-01, 2024-01-15
+    Crop Selection AI       :done, select, 2024-01-10, 2024-01-25
+    Weather Planning        :done, weather, 2024-01-20, 2024-02-05
+    
+    section 🌾 Growing Season
+    Planting                :active, plant, 2024-02-01, 2024-02-15
+    Growth Monitoring       :monitor, 2024-02-15, 2024-07-15
+    Pest/Disease Detection  :pest, 2024-03-01, 2024-07-01
+    Irrigation Management   :irrigation, 2024-02-15, 2024-07-15
+    Fertilizer Application  :fertilizer, 2024-03-01, 2024-06-01
+    
+    section 📈 Market Analysis
+    Price Tracking          :price, 2024-02-01, 2024-08-15
+    Demand Forecasting      :demand, 2024-06-01, 2024-08-15
+    Optimal Selling Time    :sell, 2024-07-15, 2024-08-15
+    
+    section 🚜 Harvesting
+    Harvest Prediction      :harvest, 2024-07-01, 2024-08-01
+    Quality Assessment      :quality, 2024-08-01, 2024-08-15
+    Market Sale             :market, 2024-08-01, 2024-08-30
+```
+
+</div>
+
+### 📊 **Data Analytics Dashboard Structure**
+
+<div align="center">
+
+```mermaid
+mindmap
+  root((📊 CropAI Dashboard))
+    🏠 Overview
+      🎯 Key Metrics
+        📈 Yield Prediction
+        💰 Revenue Forecast
+        🌡️ Weather Status
+        ⚠️ Risk Alerts
+      📊 Quick Stats
+        🌾 Active Crops
+        📍 Farm Locations
+        📅 Current Season
+        💹 Market Trends
+    
+    🤖 AI Insights
+      🔮 Predictions
+        📈 Crop Yield
+        💰 Price Forecast
+        🌧️ Weather Patterns
+        🐛 Pest Risks
+      💡 Recommendations
+        🌱 Crop Varieties
+        ⏰ Optimal Timing
+        💧 Water Management
+        🧪 Fertilizer Mix
+    
+    📈 Market Intelligence
+      💰 Live Prices
+        🏪 Local Mandis
+        🌍 Export Markets
+        📊 Price History
+        📈 Trend Analysis
+      📊 Demand Analysis
+        🏭 Industrial Demand
+        🛒 Consumer Trends
+        📦 Supply Chain
+        🚚 Logistics
+    
+    🌦️ Weather & Climate
+      🌡️ Current Conditions
+        🌡️ Temperature
+        💧 Humidity
+        💨 Wind Speed
+        🌧️ Rainfall
+      📅 Forecasts
+        📆 7-Day Forecast
+        📊 Seasonal Outlook
+        ⚠️ Extreme Events
+        🏜️ Drought Warnings
+    
+    📱 Support & Tools
+      💬 AI Chat
+        🗣️ Voice Commands
+        📝 Text Queries
+        📊 Data Requests
+        💡 Expert Advice
+      📚 Resources
+        📖 Best Practices
+        🎥 Video Tutorials
+        📋 Checklists
+        🔗 Useful Links
+```
+
+</div>
 
 </div>
 
