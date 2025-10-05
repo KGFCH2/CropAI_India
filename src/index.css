@@ -1,0 +1,564 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Enhanced Color Palette */
+  --color-primary: #16A34A;
+  /* Green-600 */
+  --color-primary-light: #22C55E;
+  /* Green-500 */
+  --color-primary-dark: #15803D;
+  /* Green-700 */
+
+  --color-secondary: #2563EB;
+  /* Blue-600 */
+  --color-secondary-light: #3B82F6;
+  /* Blue-500 */
+  --color-secondary-dark: #1D4ED8;
+  /* Blue-700 */
+
+  --color-accent: #DC2626;
+  /* Red-600 */
+  --color-warning: #EA580C;
+  /* Orange-600 */
+  --color-success: #059669;
+  /* Emerald-600 */
+  --color-info: #0891B2;
+  /* Cyan-600 */
+  --color-purple: #7C3AED;
+  /* Violet-600 */
+  --color-pink: #DB2777;
+  /* Pink-600 */
+
+  /* Light mode - Enhanced visibility */
+  --bg-primary-light: #FFFFFF;
+  /* Pure white for better contrast */
+  --bg-secondary-light: #F8FAFC;
+  /* Slate-50 */
+  --bg-card-light: #FFFFFF;
+  /* White cards */
+  --bg-glass-light: rgba(255, 255, 255, 0.85);
+  /* More opaque for better readability */
+  --border-glass-light: rgba(0, 0, 0, 0.1);
+  /* Darker border for visibility */
+
+  /* Light mode text colors - Enhanced contrast */
+  --text-primary-light: #0F172A;
+  /* Slate-900 - Very dark for maximum contrast */
+  --text-secondary-light: #334155;
+  /* Slate-700 - Darker secondary text */
+  --text-muted-light: #475569;
+  /* Slate-600 - Readable muted text */
+  --text-accent-light: #1E293B;
+  /* Slate-800 - Accent text */
+
+  /* Dark mode backgrounds */
+  --bg-primary-dark: #0F172A;
+  /* Slate-900 */
+  --bg-secondary-dark: #1E293B;
+  /* Slate-800 */
+  --bg-card-dark: #334155;
+  /* Slate-700 */
+  --bg-glass-dark: rgba(0, 0, 0, 0.4);
+  --border-glass-dark: rgba(255, 255, 255, 0.1);
+
+  /* Dark mode text colors */
+  --text-primary-dark: #F8FAFC;
+  /* Slate-50 */
+  --text-secondary-dark: #CBD5E1;
+  /* Slate-300 */
+  --text-muted-dark: #94A3B8;
+  /* Slate-400 */
+  --text-accent-dark: #E2E8F0;
+  /* Slate-200 */
+
+  /* Enhanced gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-secondary-light) 100%);
+  --gradient-sunset: linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%);
+  --gradient-ocean: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-forest: linear-gradient(135deg, #134e5e 0%, #71b280 100%);
+
+  /* Enhanced shadows for light mode */
+  --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-light-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --shadow-dark-hover: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-primary-light);
+  color: var(--text-primary-light);
+}
+
+body.dark {
+  background-color: var(--bg-primary-dark);
+  color: var(--text-primary-dark);
+}
+
+/* Enhanced glass effects with better light mode visibility */
+.glass-effect {
+  background: var(--bg-glass-light);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass-light);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.glass-effect:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--shadow-light-hover);
+  transform: translateY(-2px);
+}
+
+.dark .glass-effect {
+  background: var(--bg-glass-dark);
+  border: 1px solid var(--border-glass-dark);
+  box-shadow: var(--shadow-dark);
+}
+
+.dark .glass-effect:hover {
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-dark-hover);
+}
+
+/* Enhanced text colors for better contrast */
+.text-gray-800 {
+  color: var(--text-primary-light) !important;
+}
+
+.dark .text-gray-800 {
+  color: var(--text-primary-dark) !important;
+}
+
+.text-gray-600 {
+  color: var(--text-secondary-light) !important;
+}
+
+.dark .text-gray-600 {
+  color: var(--text-secondary-dark) !important;
+}
+
+.text-gray-500 {
+  color: var(--text-muted-light) !important;
+}
+
+.dark .text-gray-500 {
+  color: var(--text-muted-dark) !important;
+}
+
+/* Enhanced input and form controls for light mode */
+input,
+select,
+textarea {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  color: var(--text-primary-light) !important;
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+  color: var(--text-muted-light) !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: var(--text-primary-dark) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark input::placeholder,
+.dark select::placeholder,
+.dark textarea::placeholder {
+  color: var(--text-muted-dark) !important;
+}
+
+/* Enhanced button contrast */
+button {
+  transition: all 0.3s ease;
+}
+
+/* Light mode chart improvements */
+.recharts-text {
+  fill: var(--text-primary-light) !important;
+}
+
+.dark .recharts-text {
+  fill: var(--text-primary-dark) !important;
+}
+
+/* Enhanced card effects */
+.card-flip {
+  perspective: 1000px;
+  min-height: 208px;
+}
+
+.card-flip-inner {
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  min-height: 208px;
+}
+
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-front,
+.card-flip-back {
+  backface-visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  min-height: 208px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+}
+
+/* Enhanced button styles */
+.btn-primary {
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(22, 163, 74, 0.4);
+}
+
+.btn-secondary {
+  background: var(--gradient-secondary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.4);
+}
+
+/* Progress bar enhancements */
+.progress-bar {
+  background: var(--gradient-primary);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  animation: shimmer 2s infinite;
+}
+
+/* Chart enhancements */
+.chart-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chart-container:hover {
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.dark .chart-container {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dark .chart-container:hover {
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced animations */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(34, 197, 94, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  }
+}
+
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Enhanced glow effects */
+.glow-effect {
+  transition: all 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+}
+
+.glow-active {
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.6);
+}
+
+.glow-blue:hover {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
+}
+
+.glow-purple:hover {
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
+
+.glow-red:hover {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+}
+
+/* Enhanced spacing utilities */
+.progress-78 {
+  width: 78%;
+}
+
+.progress-85 {
+  width: 85%;
+}
+
+.progress-67 {
+  width: 67%;
+}
+
+/* Mobile responsiveness enhancements */
+@media (max-width: 768px) {
+  .card-flip:hover .card-flip-inner {
+    transform: none;
+  }
+
+  .card-flip-back {
+    position: static;
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .recharts-wrapper {
+    font-size: 10px;
+  }
+
+  .glass-effect {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  .max-w-7xl {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .flex-wrap {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .inline-flex {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Theme transition improvements */
+.theme-transition * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Enhanced focus states for accessibility */
+.focus-enhanced:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.1);
+}
+
+.dark .focus-enhanced:focus {
+  box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.2);
+}
+
+/* Better scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary-dark);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: var(--bg-secondary-dark);
+}
+
+/* Enhanced tab animations */
+.tab-active {
+  background: var(--gradient-primary);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.3);
+}
+
+.tab-inactive {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+}
+
+.tab-inactive:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.dark .tab-inactive {
+  color: var(--text-secondary-dark);
+}
+
+.dark .tab-inactive:hover {
+  color: var(--text-primary-dark);
+}
+
+/* Neon effects for login page */
+.neon-grid-bg {
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.neon-text {
+  text-shadow:
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor;
+}
+
+.animation-delay-1000 {
+  animation-delay: 1s;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Enhanced animations */
+@keyframes ping {
+
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
