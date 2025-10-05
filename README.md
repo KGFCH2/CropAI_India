@@ -667,70 +667,219 @@ gantt
 <div align="center">
 
 ```mermaid
-mindmap
-  root((📊 CropAI Dashboard))
-    🏠 Overview
-      🎯 Key Metrics
-        📈 Yield Prediction
-        💰 Revenue Forecast
-        🌡️ Weather Status
-        ⚠️ Risk Alerts
-      📊 Quick Stats
-        🌾 Active Crops
-        📍 Farm Locations
-        📅 Current Season
-        💹 Market Trends
+graph TB
+    subgraph "📊 CropAI India Dashboard"
+        Dashboard[🏠 Main Dashboard<br/>Central Control Hub]
+    end
     
-    🤖 AI Insights
-      🔮 Predictions
-        📈 Crop Yield
-        💰 Price Forecast
-        🌧️ Weather Patterns
-        🐛 Pest Risks
-      💡 Recommendations
-        🌱 Crop Varieties
-        ⏰ Optimal Timing
-        💧 Water Management
-        🧪 Fertilizer Mix
+    subgraph "🎯 Overview Section"
+        Metrics[📈 Key Performance Metrics<br/>Real-time KPIs]
+        Stats[� Quick Statistics<br/>Summary Cards]
+        
+        Metrics --> YieldPred[🌾 Yield Prediction<br/>Expected Harvest Output]
+        Metrics --> Revenue[💰 Revenue Forecast<br/>Projected Earnings]
+        Metrics --> WeatherStatus[🌡️ Weather Status<br/>Current Conditions]
+        Metrics --> RiskAlerts[⚠️ Risk Alerts<br/>Warning Notifications]
+        
+        Stats --> ActiveCrops[� Active Crops<br/>Currently Growing]
+        Stats --> Locations[📍 Farm Locations<br/>Geographic Coverage]
+        Stats --> Season[📅 Current Season<br/>Kharif/Rabi Status]
+        Stats --> Trends[💹 Market Trends<br/>Price Movements]
+    end
     
-    📈 Market Intelligence
-      💰 Live Prices
-        🏪 Local Mandis
-        🌍 Export Markets
-        📊 Price History
-        📈 Trend Analysis
-      📊 Demand Analysis
-        🏭 Industrial Demand
-        🛒 Consumer Trends
-        📦 Supply Chain
-        🚚 Logistics
+    subgraph "🤖 AI Intelligence Hub"
+        Predictions[🔮 Smart Predictions<br/>ML-Powered Insights]
+        Recommendations[� AI Recommendations<br/>Actionable Advice]
+        
+        Predictions --> CropYield[�📈 Crop Yield Analysis<br/>Production Forecast]
+        Predictions --> PriceForecast[💰 Price Predictions<br/>Market Value Trends]
+        Predictions --> WeatherPattern[🌧️ Weather Patterns<br/>Climate Analysis]
+        Predictions --> PestRisk[🐛 Pest Risk Assessment<br/>Disease Detection]
+        
+        Recommendations --> CropVarieties[🌱 Optimal Crop Selection<br/>Best Varieties for Region]
+        Recommendations --> Timing[⏰ Perfect Timing<br/>Planting & Harvesting]
+        Recommendations --> WaterMgmt[💧 Water Management<br/>Irrigation Optimization]
+        Recommendations --> Fertilizer[🧪 Fertilizer Mix<br/>Nutrient Planning]
+    end
     
-    🌦️ Weather & Climate
-      🌡️ Current Conditions
-        🌡️ Temperature
-        💧 Humidity
-        💨 Wind Speed
-        🌧️ Rainfall
-      📅 Forecasts
-        📆 7-Day Forecast
-        📊 Seasonal Outlook
-        ⚠️ Extreme Events
-        🏜️ Drought Warnings
+    subgraph "📈 Market Intelligence Center"
+        LivePrices[💰 Real-time Pricing<br/>Live Market Data]
+        DemandAnalysis[📊 Demand Analytics<br/>Market Research Hub]
+        
+        LivePrices --> LocalMandis[🏪 Local Mandi Prices<br/>Regional Markets]
+        LivePrices --> ExportMarkets[🌍 Export Markets<br/>International Prices]
+        LivePrices --> PriceHistory[📊 Price History<br/>Historical Trends]
+        LivePrices --> TrendAnalysis[📈 Trend Analysis<br/>Pattern Recognition]
+        
+        DemandAnalysis --> Industrial[🏭 Industrial Demand<br/>B2B Requirements]
+        DemandAnalysis --> Consumer[🛒 Consumer Trends<br/>End-user Preferences]
+        DemandAnalysis --> SupplyChain[📦 Supply Chain<br/>Distribution Network]
+        DemandAnalysis --> Logistics[🚚 Logistics<br/>Transportation Analysis]
+    end
     
-    📱 Support & Tools
-      💬 AI Chat
-        🗣️ Voice Commands
-        📝 Text Queries
-        📊 Data Requests
-        💡 Expert Advice
-      📚 Resources
-        📖 Best Practices
-        🎥 Video Tutorials
-        📋 Checklists
-        🔗 Useful Links
+    subgraph "🌦️ Weather & Climate Station"
+        CurrentWeather[🌡️ Live Weather Data<br/>Real-time Monitoring]
+        Forecasting[📅 Weather Forecasting<br/>Predictive Analysis]
+        
+        CurrentWeather --> Temperature[🌡️ Temperature<br/>Heat Index Tracking]
+        CurrentWeather --> Humidity[💧 Humidity<br/>Moisture Levels]
+        CurrentWeather --> WindSpeed[💨 Wind Speed<br/>Air Movement]
+        CurrentWeather --> Rainfall[🌧️ Rainfall<br/>Precipitation Data]
+        
+        Forecasting --> WeekForecast[📆 7-Day Forecast<br/>Short-term Outlook]
+        Forecasting --> SeasonalOutlook[📊 Seasonal Outlook<br/>Long-term Patterns]
+        Forecasting --> ExtremeEvents[⚠️ Extreme Events<br/>Storm Warnings]
+        Forecasting --> DroughtWarning[🏜️ Drought Warnings<br/>Water Scarcity Alerts]
+    end
+    
+    subgraph "📱 Support & Communication"
+        AIChat[💬 Intelligent Chat<br/>24/7 AI Assistant]
+        Resources[� Knowledge Center<br/>Educational Hub]
+        
+        AIChat --> VoiceCommands[�🗣️ Voice Commands<br/>Hands-free Interaction]
+        AIChat --> TextQueries[📝 Text Queries<br/>Written Questions]
+        AIChat --> DataRequests[📊 Data Requests<br/>Information Retrieval]
+        AIChat --> ExpertAdvice[💡 Expert Advice<br/>Professional Guidance]
+        
+        Resources --> BestPractices[� Best Practices<br/>Proven Methods]
+        Resources --> VideoTutorials[🎥 Video Tutorials<br/>Visual Learning]
+        Resources --> Checklists[� Checklists<br/>Task Management]
+        Resources --> UsefulLinks[🔗 Useful Links<br/>External Resources]
+    end
+    
+    Dashboard --> Metrics
+    Dashboard --> Stats
+    Dashboard --> Predictions
+    Dashboard --> Recommendations
+    Dashboard --> LivePrices
+    Dashboard --> DemandAnalysis
+    Dashboard --> CurrentWeather
+    Dashboard --> Forecasting
+    Dashboard --> AIChat
+    Dashboard --> Resources
+    
+    classDef main fill:#e3f2fd,stroke:#1976d2,stroke-width:3px,color:#000
+    classDef overview fill:#e8f5e8,stroke:#4caf50,stroke-width:2px,color:#000
+    classDef ai fill:#f3e5f5,stroke:#9c27b0,stroke-width:2px,color:#000
+    classDef market fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
+    classDef weather fill:#e0f7fa,stroke:#00bcd4,stroke-width:2px,color:#000
+    classDef support fill:#fce4ec,stroke:#e91e63,stroke-width:2px,color:#000
+    
+    class Dashboard main
+    class Metrics,Stats,YieldPred,Revenue,WeatherStatus,RiskAlerts,ActiveCrops,Locations,Season,Trends overview
+    class Predictions,Recommendations,CropYield,PriceForecast,WeatherPattern,PestRisk,CropVarieties,Timing,WaterMgmt,Fertilizer ai
+    class LivePrices,DemandAnalysis,LocalMandis,ExportMarkets,PriceHistory,TrendAnalysis,Industrial,Consumer,SupplyChain,Logistics market
+    class CurrentWeather,Forecasting,Temperature,Humidity,WindSpeed,Rainfall,WeekForecast,SeasonalOutlook,ExtremeEvents,DroughtWarning weather
+    class AIChat,Resources,VoiceCommands,TextQueries,DataRequests,ExpertAdvice,BestPractices,VideoTutorials,Checklists,UsefulLinks support
 ```
 
 </div>
+
+### 🎛️ **Dashboard Component Details**
+
+<table>
+<tr>
+<td align="center"><strong>🏠 Overview Hub</strong></td>
+<td align="center"><strong>🤖 AI Intelligence</strong></td>
+<td align="center"><strong>📈 Market Center</strong></td>
+<td align="center"><strong>🌦️ Weather Station</strong></td>
+</tr>
+<tr>
+<td align="center">
+📈 <strong>Yield Forecasting</strong><br/>
+💰 <strong>Revenue Tracking</strong><br/>
+🌡️ <strong>Weather Summary</strong><br/>
+⚠️ <strong>Alert Management</strong><br/>
+🌾 <strong>Crop Monitoring</strong><br/>
+📍 <strong>Location Overview</strong><br/>
+📅 <strong>Season Status</strong><br/>
+💹 <strong>Market Overview</strong>
+</td>
+<td align="center">
+🔮 <strong>Smart Predictions</strong><br/>
+💡 <strong>AI Recommendations</strong><br/>
+📊 <strong>ML Analytics</strong><br/>
+🎯 <strong>Precision Farming</strong><br/>
+🧠 <strong>Decision Support</strong><br/>
+⚡ <strong>Auto-suggestions</strong><br/>
+📈 <strong>Performance Insights</strong><br/>
+🔬 <strong>Data Analysis</strong>
+</td>
+<td align="center">
+💰 <strong>Live Price Feed</strong><br/>
+� <strong>Mandi Integration</strong><br/>
+📊 <strong>Demand Analysis</strong><br/>
+🌍 <strong>Export Markets</strong><br/>
+📈 <strong>Trend Tracking</strong><br/>
+🏭 <strong>B2B Connections</strong><br/>
+🛒 <strong>Consumer Insights</strong><br/>
+🚚 <strong>Supply Chain Data</strong>
+</td>
+<td align="center">
+🌡️ <strong>Real-time Weather</strong><br/>
+📅 <strong>7-Day Forecasts</strong><br/>
+🌧️ <strong>Rainfall Tracking</strong><br/>
+💨 <strong>Wind Monitoring</strong><br/>
+💧 <strong>Humidity Levels</strong><br/>
+🏜️ <strong>Drought Alerts</strong><br/>
+📊 <strong>Climate Trends</strong><br/>
+⚠️ <strong>Weather Warnings</strong>
+</td>
+</tr>
+</table>
+
+### � **Support & Communication Features**
+
+<table>
+<tr>
+<td align="center"><strong>🤖 AI Chat Assistant</strong></td>
+<td align="center"><strong>📚 Knowledge Resources</strong></td>
+<td align="center"><strong>👥 Expert Network</strong></td>
+<td align="center"><strong>📱 Mobile Features</strong></td>
+</tr>
+<tr>
+<td align="center">
+🗣️ <strong>Voice Recognition</strong><br/>
+📝 <strong>Natural Language</strong><br/>
+⚡ <strong>Instant Responses</strong><br/>
+🎯 <strong>Context Awareness</strong><br/>
+💬 <strong>Multi-language Support</strong><br/>
+📊 <strong>Data Visualization</strong><br/>
+🔔 <strong>Smart Notifications</strong><br/>
+💡 <strong>Proactive Tips</strong>
+</td>
+<td align="center">
+� <strong>Best Practices Guide</strong><br/>
+🎥 <strong>Video Library</strong><br/>
+📋 <strong>Crop Manuals</strong><br/>
+📊 <strong>Research Papers</strong><br/>
+�🔗 <strong>External Resources</strong><br/>
+📚 <strong>Digital Library</strong><br/>
+🎓 <strong>Training Modules</strong><br/>
+💾 <strong>Downloadable Content</strong>
+</td>
+<td align="center">
+👨‍🌾 <strong>Agricultural Experts</strong><br/>
+🔬 <strong>Research Scientists</strong><br/>
+🏛️ <strong>Government Officials</strong><br/>
+🌾 <strong>Experienced Farmers</strong><br/>
+📞 <strong>Video Consultations</strong><br/>
+💬 <strong>Live Chat Support</strong><br/>
+📅 <strong>Appointment Booking</strong><br/>
+⭐ <strong>Expert Ratings</strong>
+</td>
+<td align="center">
+📱 <strong>Progressive Web App</strong><br/>
+📵 <strong>Offline Capability</strong><br/>
+🔔 <strong>Push Notifications</strong><br/>
+📍 <strong>GPS Integration</strong><br/>
+📷 <strong>Camera Features</strong><br/>
+🎙️ <strong>Voice Commands</strong><br/>
+📊 <strong>Touch Gestures</strong><br/>
+🔄 <strong>Real-time Sync</strong>
+</td>
+</tr>
+</table>
 
 </div>
 
