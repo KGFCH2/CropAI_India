@@ -13,6 +13,8 @@
 
 🌱 **10,000+ Farmers** | 📊 **55+ Crop Varieties** | 🗺️ **36 States & UTs** | 📈 **2030 Future Trends**
 
+**🎯 [Live Demo](https://kgfch2.github.io/CropAI-India/) | 📁 [Source Code](https://github.com/KGFCH2/CropAI_India)**
+
 </div>
 
 ---
