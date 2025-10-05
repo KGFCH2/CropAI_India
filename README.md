@@ -468,8 +468,10 @@ sequenceDiagram
 <div align="center">
 
 ```mermaid
-flowchart LR
-    Start([🚀 User Visits Platform]) --> Register{👤 New User?}
+flowchart TD
+    Start([🚀 User Visits Platform])
+    
+    Start --> Register{👤 New User?}
     
     Register -->|Yes| Signup[📝 Sign Up Process]
     Register -->|No| Login[🔑 Login]
@@ -494,20 +496,28 @@ flowchart LR
     ChatPath --> Results
     
     Results --> Action{⚡ Take Action?}
+    
     Action -->|Yes| Implement[✅ Implement Advice]
-    Action -->|No| Dashboard
+    Action -->|No| BackToDash[🔄 Return to Dashboard]
     
     Implement --> Success[🎉 Improved Farming]
-    Success --> Dashboard
+    BackToDash --> Dashboard
+    Success --> Continue{🔄 Continue Using Platform?}
+    
+    Continue -->|Yes| Dashboard
+    Continue -->|No| End([👋 Thank You!])
     
     classDef startEnd fill:#e8f5e8,stroke:#4caf50,stroke-width:3px,color:#000
     classDef process fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
     classDef decision fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
     classDef success fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000
+    classDef return fill:#fce4ec,stroke:#e91e63,stroke-width:2px,color:#000
     
-    class Start,Success startEnd
+    class Start,End startEnd
     class Signup,Profile,Location,Crops,Dashboard,AIPath,MarketPath,WeatherPath,ChatPath,Results,Implement process
-    class Register,Features,Action decision
+    class Register,Features,Action,Continue decision
+    class Success success
+    class BackToDash return
 ```
 
 </div>
