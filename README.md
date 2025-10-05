@@ -1,4 +1,4 @@
-# 🌾 CropAI India - AI-Powered Agricultural Intelligence Platform
+# 🌾 CropAI_India - AI-Powered Agricultural Intelligence Platform
 
 <div align="center">
 
