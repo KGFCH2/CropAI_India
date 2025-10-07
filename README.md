@@ -13,7 +13,7 @@
 
 🌱 **10,000+ Farmers** | 📊 **55+ Crop Varieties** | 🗺️ **36 States & UTs** | 📈 **2030 Future Trends**
 
-**🎯 [Live Demo](https://kgfch2.github.io/CropAI-India/) | 📁 [Source Code](https://github.com/KGFCH2/CropAI_India)**
+**🎯 [Live Demo](https://kgfch2.github.io/CropAI-India/) | 📁 [Source Code](https://github.com/KGFCH2/CropAI-India)**
 
 </div>
 
@@ -1044,8 +1044,8 @@ Make sure you have the following installed:
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/CropAI_India.git
-cd CropAI_India
+git clone https://github.com/KGFCH2/CropAI-India.git
+cd CropAI-India
 ```
 
 2. **Install dependencies**
