@@ -76,11 +76,11 @@ Indian farmers face a complex web of challenges that severely impact their produ
 
 ---
 
-## 💡 Solution: CropAI India Platform
+## 💡 Solution: CropAI_India Platform
 
 ### 🤖 **AI-Powered Agricultural Intelligence Ecosystem**
 
-CropAI India is a comprehensive digital platform that leverages cutting-edge artificial intelligence, machine learning, and data analytics to transform agricultural decision-making across India.
+CropAI_India is a comprehensive digital platform that leverages cutting-edge artificial intelligence, machine learning, and data analytics to transform agricultural decision-making across India.
 
 #### 🎯 **Core Solution Components:**
 
@@ -230,11 +230,11 @@ CropAI India is a comprehensive digital platform that leverages cutting-edge art
 
 ---
 
-## 🎯 About CropAI India
+## 🎯 About CropAI_India
 
-CropAI India is a comprehensive **AI-powered agricultural intelligence platform** designed specifically for the Indian farming landscape. Our platform provides data-driven insights, market intelligence, and predictive analytics to help farmers maximize yields, optimize profits, and make informed farming decisions across all Indian states and union territories.
+CropAI_India is a comprehensive **AI-powered agricultural intelligence platform** designed specifically for the Indian farming landscape. Our platform provides data-driven insights, market intelligence, and predictive analytics to help farmers maximize yields, optimize profits, and make informed farming decisions across all Indian states and union territories.
 
-### 🌟 Why CropAI India?
+### 🌟 Why CropAI_India?
 
 - 📊 **Comprehensive Data Coverage** across 55+ crop varieties
 - �️ **Pan-India Agricultural Intelligence** covering all states & UTs
@@ -537,7 +537,7 @@ flowchart TD
 
 ```mermaid
 gantt
-    title 🚀 CropAI India Development Roadmap
+    title 🚀 CropAI_India Development Roadmap
     dateFormat  YYYY-MM-DD
     section 🎨 Phase 1: Frontend
     UI Components          :done, ui, 2024-09-01, 2024-10-01
@@ -678,7 +678,7 @@ gantt
 
 ```mermaid
 flowchart TD
-    subgraph "📊 CropAI India Dashboard"
+    subgraph "📊 CropAI_India Dashboard"
         Dashboard[🏠 Main Dashboard<br/>Central Control Hub]
     end
     
@@ -1254,25 +1254,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 📞 Support & Contact
-
-- 🌐 **Website**: [cropaI-india.com](https://cropai-india.com)
-- 📧 **Email**: support@cropai-india.com
-- 💬 **Chat**: Use our in-app chat support
-- 📱 **Social Media**: Follow us for updates
-
----
-
-## 🙏 Acknowledgments
-
-- 🌾 **Indian Agricultural Research Institute** for crop data
-- 🛰️ **ISRO** for satellite imagery support
-- 🌦️ **IMD** for weather data integration
-- 👨‍🌾 **Farmer Community** for valuable feedback and insights
-- 🤝 **Open Source Community** for amazing tools and libraries
-
----
-
 <div align="center">
 
 ### 🌟 Star this repository if you find it helpful!
@@ -1287,7 +1268,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 📊 Project Statistics
 
-- 📅 **Last Updated**: October 2024
+- 📅 **Last Updated**: October 2025
 - 🌾 **Crop Varieties**: 55+
 - 🗺️ **Geographic Coverage**: 36 States & UTs
 - 👨‍🌾 **Active Farmers**: 10,000+
