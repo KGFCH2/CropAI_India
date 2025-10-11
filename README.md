@@ -1,4 +1,4 @@
-# 🌾 CropAI_India - AI-Powered Agricultural Intelligence Platform
+# 🌾 CropAI India - AI-Powered Agricultural Intelligence Platform 🌾
 
 <div align="center">
 
@@ -76,11 +76,11 @@ Indian farmers face a complex web of challenges that severely impact their produ
 
 ---
 
-## 💡 Solution: CropAI_India Platform
+## 💡 Solution: CropAI India Platform
 
 ### 🤖 **AI-Powered Agricultural Intelligence Ecosystem**
 
-CropAI_India is a comprehensive digital platform that leverages cutting-edge artificial intelligence, machine learning, and data analytics to transform agricultural decision-making across India.
+**CropAI India** is a comprehensive digital platform that leverages cutting-edge artificial intelligence, machine learning, and data analytics to transform agricultural decision-making across India.
 
 #### 🎯 **Core Solution Components:**
 
@@ -230,14 +230,14 @@ CropAI_India is a comprehensive digital platform that leverages cutting-edge art
 
 ---
 
-## 🎯 About CropAI_India
+## 🎯 About CropAI India
 
-CropAI_India is a comprehensive **AI-powered agricultural intelligence platform** designed specifically for the Indian farming landscape. Our platform provides data-driven insights, market intelligence, and predictive analytics to help farmers maximize yields, optimize profits, and make informed farming decisions across all Indian states and union territories.
+**CropAI India** is a comprehensive **AI-powered agricultural intelligence platform** designed specifically for the Indian farming landscape. Our platform provides data-driven insights, market intelligence, and predictive analytics to help farmers maximize yields, optimize profits, and make informed farming decisions across all Indian states and union territories.
 
-### 🌟 Why CropAI_India?
+### 🌟 Why CropAI India?
 
 - 📊 **Comprehensive Data Coverage** across 55+ crop varieties
-- �️ **Pan-India Agricultural Intelligence** covering all states & UTs
+- 🗺️ **Pan-India Agricultural Intelligence** covering all states & UTs
 - 💻 **Modern Tech Stack** with React, TypeScript, and responsive design
 - 🌾 **Detailed Crop Analytics** with yield, cost, and market insights
 - 🎯 **User-Centric Design** for farmers and agricultural professionals
@@ -358,73 +358,6 @@ graph TB
 | 🌐 **Phase 4: Advanced** | Expert Network + Mobile Apps | 🔮 **Future** | Q3 2026 |
 
 ---
-
-<div align="center">
-
-```mermaid
-flowchart TD
-    A["👨‍🌾 Farmer Registration<br/>Create Account & Profile"] --> B["📍 Location Setup<br/>State, District Selection"]
-    B --> C["🌾 Crop Selection<br/>Choose from 55+ Varieties"]
-    C --> D["📊 Dashboard Access<br/>React-based Interface"]
-    
-    D --> E["🤖 Crop Analytics<br/>Static Data Analysis"]
-    D --> F["📈 Market Intelligence<br/>Price & Trend Data"]
-    D --> G["🌦️ Weather Insights<br/>Climate Information"]
-    D --> H["💬 Chat Support<br/>UI Component Ready"]
-    
-    E --> I["🎯 Yield Information<br/>Historical Data"]
-    E --> J["🛡️ Risk Assessment<br/>Weather Risk Analysis"]
-    E --> K["🌱 Crop Recommendations<br/>Based on Location"]
-    
-    F --> L["💰 Price Information<br/>Current Market Data"]
-    F --> M["📊 Demand Analysis<br/>Market Trends"]
-    F --> N["🔔 Market Insights<br/>Price Patterns"]
-    
-    G --> O["⚠️ Weather Information<br/>Current Conditions"]
-    G --> P["🌧️ Seasonal Patterns<br/>Historical Weather"]
-    G --> Q["🏜️ Climate Insights<br/>Regional Data"]
-    
-    H --> R["🧠 Information Display<br/>Comprehensive Data"]
-    H --> S["📱 Responsive Design<br/>Mobile Optimized"]
-    H --> T["📚 Knowledge Base<br/>Crop Information"]
-    
-    I --> U["📋 Farming Insights<br/>Data-driven Guidance"]
-    J --> U
-    K --> U
-    L --> V["💡 Decision Support<br/>Informed Choices"]
-    M --> V
-    N --> V
-    O --> W["🌾 Agricultural Planning<br/>Season-based Advice"]
-    P --> W
-    Q --> W
-    R --> X["📈 Better Understanding<br/>Agricultural Knowledge"]
-    S --> X
-    T --> X
-    
-    U --> Y["🌾 Informed Farming<br/>Data-driven Decisions"]
-    V --> Y
-    W --> Y
-    X --> Y
-    
-    Y --> Z["💰 Potential Benefits<br/>Improved Outcomes"]
-    
-    %% Styling for better visibility
-    classDef userInput fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
-    classDef dataProcess fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
-    classDef marketData fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
-    classDef weatherData fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
-    classDef support fill:#fce4ec,stroke:#c2185b,stroke-width:2px,color:#000
-    classDef outcome fill:#e0f2f1,stroke:#00695c,stroke-width:3px,color:#000
-    
-    class A,B,C,D userInput
-    class E,I,J,K dataProcess
-    class F,L,M,N marketData
-    class G,O,P,Q weatherData
-    class H,R,S,T support
-    class U,V,W,X,Y,Z outcome
-```
-
-</div>
 
 ### 🏗️ **Current Tech Architecture**
 
@@ -640,147 +573,6 @@ flowchart TD
 | 🔧 **Phase 2: Intelligence** | AI/ML Integration + Predictions | 🔄 **In Planning** |
 | 📡 **Phase 3: Real-time** | Live Data + API Integration | 📅 **Roadmap** |
 | 🌐 **Phase 4: Advanced** | Expert Network + Mobile Apps | 🔮 **Future** |
-
-### � **Development Timeline**
-
-<div align="center">
-
-```mermaid
-gantt
-    title 🚀 CropAI_India Development Roadmap
-    dateFormat  YYYY-MM-DD
-    section 🎨 Phase 1: Frontend
-    UI Components          :done, ui, 2024-09-01, 2024-10-01
-    Authentication         :done, auth, 2024-09-15, 2024-10-05
-    Dashboard & Data       :active, dash, 2024-10-01, 2024-10-15
-    Testing & Polish       :test1, 2024-10-10, 2024-10-30
-    
-    section 🤖 Phase 2: AI Integration
-    ML Model Development   :ml, 2024-11-01, 2025-01-15
-    Prediction APIs        :api1, 2024-12-01, 2025-02-01
-    AI Features Testing    :test2, 2025-01-15, 2025-02-15
-    
-    section � Phase 3: Real-time Data
-    External API Setup     :api2, 2025-02-01, 2025-03-15
-    Live Weather Integration :weather, 2025-02-15, 2025-03-30
-    Market Data Feeds      :market, 2025-03-01, 2025-04-15
-    Alert Systems          :alerts, 2025-03-15, 2025-04-30
-    
-    section 🌐 Phase 4: Advanced Features
-    Expert Network         :expert, 2025-05-01, 2025-07-01
-    Mobile App Development :mobile, 2025-06-01, 2025-08-15
-    Community Features     :community, 2025-07-01, 2025-09-01
-```
-
-</div>
-
-### 🧠 **AI/ML Pipeline Architecture**
-
-<div align="center">
-
-```mermaid
-flowchart TB
-    subgraph "📥 Data Ingestion"
-        Satellite[🛰️ Satellite Imagery<br/>Real-time Monitoring]
-        IoT[📡 IoT Sensors<br/>Soil & Weather Data]
-        Historical[📊 Historical Data<br/>10+ Years Records]
-        Market[💰 Market Data<br/>Price & Demand]
-    end
-    
-    subgraph "🔄 Data Processing"
-        Clean[🧹 Data Cleaning<br/>Validation & Normalization]
-        Feature[⚙️ Feature Engineering<br/>Variable Creation]
-        Integrate[🔗 Data Integration<br/>Multi-source Fusion]
-    end
-    
-    subgraph "🤖 Machine Learning Models"
-        Yield[📈 Yield Prediction<br/>Random Forest + XGBoost]
-        Price[💹 Price Forecasting<br/>LSTM + ARIMA]
-        Risk[⚠️ Risk Assessment<br/>SVM + Neural Networks]
-        Recommend[🎯 Crop Recommendation<br/>Collaborative Filtering]
-    end
-    
-    subgraph "🔍 Model Validation"
-        Test[🧪 A/B Testing<br/>Model Performance]
-        Validate[✅ Cross Validation<br/>Accuracy Assessment]
-        Monitor[📊 Model Monitoring<br/>Drift Detection]
-    end
-    
-    subgraph "📤 Output Generation"
-        Insights[💡 Actionable Insights<br/>Farmer Recommendations]
-        Alerts[🚨 Real-time Alerts<br/>Critical Notifications]
-        Reports[📋 Detailed Reports<br/>Analytics Dashboard]
-    end
-    
-    Satellite --> Clean
-    IoT --> Clean
-    Historical --> Clean
-    Market --> Clean
-    
-    Clean --> Feature
-    Feature --> Integrate
-    
-    Integrate --> Yield
-    Integrate --> Price
-    Integrate --> Risk
-    Integrate --> Recommend
-    
-    Yield --> Test
-    Price --> Validate
-    Risk --> Monitor
-    Recommend --> Test
-    
-    Test --> Insights
-    Validate --> Alerts
-    Monitor --> Reports
-    
-    classDef input fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
-    classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
-    classDef ml fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
-    classDef validate fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
-    classDef output fill:#e0f2f1,stroke:#00695c,stroke-width:2px,color:#000
-    
-    class Satellite,IoT,Historical,Market input
-    class Clean,Feature,Integrate process
-    class Yield,Price,Risk,Recommend ml
-    class Test,Validate,Monitor validate
-    class Insights,Alerts,Reports output
-```
-
-</div>
-
-### 🌾 **Crop Lifecycle Management**
-
-<div align="center">
-
-```mermaid
-gantt
-    title 🌾 Crop Lifecycle with AI Interventions
-    dateFormat  YYYY-MM-DD
-    section 🌱 Pre-Planting
-    Soil Analysis           :done, soil, 2024-01-01, 2024-01-15
-    Crop Selection AI       :done, select, 2024-01-10, 2024-01-25
-    Weather Planning        :done, weather, 2024-01-20, 2024-02-05
-    
-    section 🌾 Growing Season
-    Planting                :active, plant, 2024-02-01, 2024-02-15
-    Growth Monitoring       :monitor, 2024-02-15, 2024-07-15
-    Pest/Disease Detection  :pest, 2024-03-01, 2024-07-01
-    Irrigation Management   :irrigation, 2024-02-15, 2024-07-15
-    Fertilizer Application  :fertilizer, 2024-03-01, 2024-06-01
-    
-    section 📈 Market Analysis
-    Price Tracking          :price, 2024-02-01, 2024-08-15
-    Demand Forecasting      :demand, 2024-06-01, 2024-08-15
-    Optimal Selling Time    :sell, 2024-07-15, 2024-08-15
-    
-    section 🚜 Harvesting
-    Harvest Prediction      :harvest, 2024-07-01, 2024-08-01
-    Quality Assessment      :quality, 2024-08-01, 2024-08-15
-    Market Sale             :market, 2024-08-01, 2024-08-30
-```
-
-</div>
 
 ### 📊 **Data Analytics Dashboard Structure**
 
@@ -1355,12 +1147,6 @@ We welcome contributions from the community! Here's how you can help:
 - ✨ Add meaningful animations
 - 📝 Document your code
 - 🧪 Write tests for new features
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
 ---
 
