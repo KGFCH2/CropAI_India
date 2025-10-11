@@ -13,7 +13,7 @@
 
 🌱 **10,000+ Farmers** | 📊 **55+ Crop Varieties** | 🗺️ **36 States & UTs** | 📈 **2030 Future Trends**
 
-**🎯 [Live Demo](https://kgfch2.github.io/CropAI-India/) | 📁 [Source Code](https://github.com/KGFCH2/CropAI-India)**
+**🎯 [Live Demo](https://crop-ai-india.vercel.app/) | 📁 [Source Code](https://github.com/KGFCH2/CropAI-India)**
 
 </div>
 
@@ -245,9 +245,119 @@ CropAI_India is a comprehensive **AI-powered agricultural intelligence platform*
 
 ---
 
-## 🔄 Platform Workflow & System Architecture
+## 🔄 How CropAI India Works
 
-### 📊 **Current Platform Workflow**
+### 🚀 **Simple Workflow - From Registration to Results**
+
+<div align="center">
+
+```mermaid
+flowchart TD
+    A["👨‍🌾 Farmer Registration<br/>Create Account & Profile"] --> B["📍 Location Setup<br/>State, District Selection"]
+    B --> C["🌾 Crop Selection<br/>Choose from 55+ Varieties"]
+    C --> D["📊 Dashboard Access<br/>React-based Interface"]
+    
+    D --> E["🤖 Crop Analytics<br/>Smart Insights"]
+    D --> F["📈 Market Intelligence<br/>Price & Trend Data"]
+    D --> G["🌦️ Weather Insights<br/>Climate Information"]
+    D --> H["💬 AI Assistant<br/>24/7 Support"]
+    
+    E --> I["📈 25-40% Yield ↗️"]
+    F --> J["💰 30-50% Income ↗️"]
+    G --> K["🌡️ 60% Climate Loss ↘️"]
+    H --> L["⚡ 90% Faster Decisions"]
+    
+    I --> M["🌾 Better Farming Outcomes"]
+    J --> M
+    K --> M
+    L --> M
+    
+    classDef input fill:#e3f2fd,stroke:#1976d2,stroke-width:2px,color:#000
+    classDef process fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#000
+    classDef features fill:#e8f5e8,stroke:#388e3c,stroke-width:2px,color:#000
+    classDef outcomes fill:#fff3e0,stroke:#f57c00,stroke-width:2px,color:#000
+    classDef success fill:#e0f2f1,stroke:#00695c,stroke-width:3px,color:#000
+    
+    class A,B,C input
+    class D process
+    class E,F,G,H features
+    class I,J,K,L outcomes
+    class M success
+```
+
+</div>
+
+### 🏗️ **Technology Architecture - Built with Modern Stack**
+
+<div align="center">
+
+```mermaid
+graph TB
+    subgraph "🌐 Frontend Layer"
+        UI[📱 React 18.3.1<br/>TypeScript + Tailwind CSS]
+        Router[🛤️ React Router<br/>Navigation System]
+        State[⚡ Context API<br/>State Management]
+    end
+    
+    subgraph "🎨 UI Components"
+        Auth[🔐 Authentication<br/>Login/Signup System]
+        Dashboard[📊 Main Dashboard<br/>Data Visualization]
+        Cards[📇 Crop Cards<br/>Information Display]
+        Chat[💬 AI Chat Interface<br/>Support System]
+    end
+    
+    subgraph "📊 Data Layer"
+        CropDB[🗃️ Crop Database<br/>55+ Varieties]
+        Regional[🗺️ Regional Data<br/>36 States & UTs]
+        Market[💰 Market Intelligence<br/>Price & Trends]
+        Weather[🌦️ Weather Data<br/>Climate Information]
+    end
+    
+    subgraph "🚀 Deployment"
+        Vercel[🌐 Vercel Hosting<br/>Global CDN]
+        PWA[📱 Progressive Web App<br/>Mobile Optimized]
+        Performance[⚡ Fast Loading<br/>99.9% Uptime]
+    end
+    
+    UI --> Router
+    UI --> State
+    Router --> Auth
+    Router --> Dashboard
+    Dashboard --> Cards
+    Dashboard --> Chat
+    
+    Cards --> CropDB
+    Dashboard --> Regional
+    Cards --> Market
+    Dashboard --> Weather
+    
+    Auth --> Vercel
+    Dashboard --> PWA
+    Cards --> Performance
+    
+    classDef frontend fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#000
+    classDef components fill:#e8f5e8,stroke:#4caf50,stroke-width:2px,color:#000
+    classDef data fill:#fff3e0,stroke:#ff9800,stroke-width:2px,color:#000
+    classDef deploy fill:#fce4ec,stroke:#e91e63,stroke-width:2px,color:#000
+    
+    class UI,Router,State frontend
+    class Auth,Dashboard,Cards,Chat components
+    class CropDB,Regional,Market,Weather data
+    class Vercel,PWA,Performance deploy
+```
+
+</div>
+
+### 🎯 **Development Status & Roadmap**
+
+| **Phase** | **Features** | **Status** | **Timeline** |
+|-----------|--------------|------------|--------------|
+| 🎯 **Phase 1: Foundation** | User Interface + Static Data | ✅ **Completed** | October 2025 |
+| 🔧 **Phase 2: Intelligence** | AI/ML Integration + Predictions | 🔄 **In Planning** | Q1 2026 |
+| 📡 **Phase 3: Real-time** | Live Data + API Integration | 📅 **Roadmap** | Q2 2026 |
+| 🌐 **Phase 4: Advanced** | Expert Network + Mobile Apps | 🔮 **Future** | Q3 2026 |
+
+---
 
 <div align="center">
 
