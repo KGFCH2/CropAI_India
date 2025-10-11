@@ -1174,3 +1174,5 @@ We welcome contributions from the community! Here's how you can help:
 ---
 
 *Built with cutting-edge technology to serve the backbone of India - our farmers* 🇮🇳
+
+---
